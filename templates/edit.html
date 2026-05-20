@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑学生</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+        }
+        .card h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .form-item {
+            margin-bottom: 18px;
+        }
+        .form-item label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .form-item input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+        .form-item input:focus {
+            border-color: #409eff;
+        }
+        .btns {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #e6a23c;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        a {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            background: #909399;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>编辑学生</h2>
+        <form method="POST">
+            <div class="form-item">
+                <label>姓名</label>
+                <input type="text" name="name" value="{{ stu.name }}" required>
+            </div>
+            <div class="form-item">
+                <label>年龄</label>
+                <input type="number" name="age" value="{{ stu.age }}">
+            </div>
+            <div class="form-item">
+                <label>性别</label>
+                <input type="text" name="gender" value="{{ stu.gender }}">
+            </div>
+            <div class="form-item">
+                <label>专业</label>
+                <input type="text" name="major" value="{{ stu.major }}">
+            </div>
+            <div class="btns">
+                <button type="submit">保存</button>
+                <a href="/">返回</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>编辑学生</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div style="width: 50%; margin: 20px auto;">-->
+<!--        <h2>编辑学生信息</h2>-->
+<!--        <form method="POST" action="/edit/{{ stu.id }}">-->
+<!--            <div style="margin: 10px 0;">-->
+<!--                <label>姓名：</label>-->
+<!--                <input type="text" name="name" value="{{ stu.name }}" required>-->
+<!--            </div>-->
+<!--            <div style="margin: 10px 0;">-->
+<!--                <label>年龄：</label>-->
+<!--                <input type="number" name="age" value="{{ stu.age }}">-->
+<!--            </div>-->
+<!--            <div style="margin: 10px 0;">-->
+<!--                <label>性别：</label>-->
+<!--                <input type="text" name="gender" value="{{ stu.gender }}">-->
+<!--            </div>-->
+<!--            <div style="margin: 10px 0;">-->
+<!--                <label>专业：</label>-->
+<!--                <input type="text" name="major" value="{{ stu.major }}">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <button type="submit">保存</button>-->
+<!--                <a href="/index">返回</a>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->

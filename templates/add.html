@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加学生</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color:#f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background:lightblue;
+            width: 100%;
+            max-width: 500px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow:0 2px 15px rgba(0,0,0,0.2);
+        }
+        .card h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .form-item {
+            margin-bottom: 18px;
+        }
+        .form-item label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .form-item input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+        .form-item input:focus {
+            border-color: #409eff;
+        }
+        .btns {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #67c23a;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        a {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            background: #909399;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>添加学生</h2>
+        <form method="POST">
+            <div class="form-item">
+                <label>姓名</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-item">
+                <label>年龄</label>
+                <input type="number" name="age">
+            </div>
+            <div class="form-item">
+                <label>性别</label>
+                <input type="text" name="gender">
+            </div>
+            <div class="form-item">
+                <label>专业</label>
+                <input type="text" name="major">
+            </div>
+            <div class="btns">
+                <button type="submit">提交</button>
+                <a href="/">返回</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
